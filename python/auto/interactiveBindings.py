@@ -1,12 +1,14 @@
 #! /usr/bin/env python
 
-import sys
-import os
 import code
 import getopt
-import re
-import AUTOExceptions
 import keyword
+import os
+import re
+import sys
+
+from . import AUTOExceptions
+
 try:
     import __builtin__
 except ImportError:
@@ -514,4 +516,3 @@ def automain(name=None):
 
 if __name__ == "__main__":
     automain()
-

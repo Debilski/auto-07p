@@ -5,23 +5,18 @@ try:
 except ImportError: # Python 3
     from io import StringIO
     import builtins as __builtin__
-import parseC
-import parseB
-import parseS
-import parseBandS
-import parseH
-import bifDiag
-import os
-import AUTOutil
-import sys
 import glob
+import os
 import shutil
+import sys
+
+from . import (AUTOExceptions, AUTOutil, bifDiag, parseB, parseBandS, parseC,
+               parseH, parseS)
 
 SIMPLE=0
 EXPERT=1
 
 
-import AUTOExceptions
 
 #############################################
 #  commands      

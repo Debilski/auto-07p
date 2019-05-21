@@ -1,13 +1,18 @@
 #! /usr/bin/env python
-import getopt,sys,os
+import gc
+import getopt
+import glob
+import os
+import re
 import signal
+import sys
+
+from . import AUTOExceptions, parseC, parseS
+
 try:
     from cStringIO import StringIO
 except ImportError: # Python 3
     from io import StringIO
-import re
-import glob
-import AUTOExceptions,parseC,parseS,gc
 try:
     import subprocess
 except ImportError:
@@ -650,7 +655,3 @@ if __name__ == "__main__":
         runner.runDemo(args[0],log=log,err=err)
     if len(args) == 2:
         runner.runDemo(args[0],part=args[1],log=log,err=err)
-        
-    
-
-

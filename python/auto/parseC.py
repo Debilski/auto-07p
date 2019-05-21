@@ -18,9 +18,8 @@
 #    MA 02111-1307, USA
 
 import sys
-import AUTOExceptions
-import AUTOutil
-import parseB
+
+from . import AUTOExceptions, AUTOutil, parseB
 
 # The parseC class parses an AUTO parameter file
 # THESE EXPECT THE FILE TO HAVE VERY SPECIFIC FORMAT!
@@ -523,5 +522,3 @@ def test():
 
 if __name__ == '__main__' :
     test()
-
-

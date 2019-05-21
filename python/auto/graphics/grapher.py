@@ -7,12 +7,12 @@ except ImportError:
     import tkinter as Tkinter # Python 3
     from tkinter import simpledialog as tkSimpleDialog
     from tkinter import filedialog as tkFileDialog
-from graphics import Pmw
-import AUTOutil
-from graphics import optionHandler
 import math
-import sys
 import string
+import sys
+
+import AUTOutil
+from graphics import Pmw, optionHandler
 
 GrapherError="GrapherError"
 Axes3D=None
@@ -975,9 +975,3 @@ def test(grapher=None):
 
 if __name__=='__main__':
     test()
-
-
-
-
-
-

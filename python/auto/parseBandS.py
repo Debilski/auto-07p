@@ -16,10 +16,8 @@
 #    License along with this library; if not, write to the Free
 #    Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 #    MA 02111-1307, USA
-import parseB
-import parseS
-import parseD
-import AUTOExceptions
+from . import AUTOExceptions, parseB, parseD, parseS
+
 
 class parseBandS:
     def __init__(self,fort7_filename=None,fort8_filename=None,fort9_filename=None):

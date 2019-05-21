@@ -1,6 +1,18 @@
 
-from graphics import PmwColor as Color
+######################################################################
+### File: PmwLogicalFont.py
+######################################################################
+### File: PmwBalloon.py
+import os
+import re
+######################################################################
+### File: PmwCounter.py
+import sys
+import time
+import traceback
+
 from graphics import PmwBlt as Blt
+from graphics import PmwColor as Color
 
 ### Loader functions:
 
@@ -50,9 +62,6 @@ try:
 except NameError:
     long = int
 
-import os
-import sys
-import traceback
 try:
     import Tkinter
 except ImportError:
@@ -1980,7 +1989,6 @@ class _ErrorWindow:
 #     Cancel        Close a window which may be used to change the state of
 #                   the application.
 
-import sys
 
 
 # A Toplevel with a ButtonBox and child site.
@@ -2157,7 +2165,6 @@ class Dialog(MegaToplevel):
 ### File: PmwTimeFuncs.py
 # Functions for dealing with dates and times.
 
-import re
 
 def timestringtoseconds(text, separator = ':'):
   inputList = text.strip().split(separator)
@@ -2301,9 +2308,6 @@ def stringtoreal(text, separator = '.'):
             text = text[:index] + '.' + text[index + 1:]
     return float(text)
 
-######################################################################
-### File: PmwBalloon.py
-import os
 
 
 class Balloon(MegaToplevel):
@@ -2895,7 +2899,6 @@ class ButtonBox(MegaWidget):
 ### File: PmwEntryField.py
 # Based on iwidgets2.2.0/entryfield.itk code.
 
-import re
 
 
 # Possible return values of validation functions.
@@ -4950,7 +4953,6 @@ class OptionMenu(MegaWidget):
 # PanedWidget
 # a frame which may contain several resizable sub-frames
 
-import sys
 
 
 class PanedWidget(MegaWidget):
@@ -7674,8 +7676,6 @@ forwardmethods(TextDialog, ScrolledText, '_text')
 ### File: PmwTimeCounter.py
 # Authors: Joe VanAndel and Greg McFarlane
 
-import sys
-import time
 
 
 class TimeCounter(MegaWidget):
@@ -8111,7 +8111,6 @@ def aboutcontact(value):
 ### File: PmwComboBox.py
 # Based on iwidgets2.2.0/combobox.itk code.
 
-import os
 
 
 class ComboBox(MegaWidget):
@@ -8553,9 +8552,6 @@ class ComboBoxDialog(Dialog):
 
 forwardmethods(ComboBoxDialog, ComboBox, '_combobox')
 
-######################################################################
-### File: PmwCounter.py
-import sys
 
 
 class Counter(MegaWidget):
@@ -8983,9 +8979,6 @@ class CounterDialog(Dialog):
 
 forwardmethods(CounterDialog, Counter, '_cdCounter')
 
-######################################################################
-### File: PmwLogicalFont.py
-import os
 
 def _font_initialise(root, size=None, fontScheme = None):
     global _fontSize

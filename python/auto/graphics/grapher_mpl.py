@@ -1,14 +1,22 @@
 #!/usr/bin/env python
-import matplotlib
-matplotlib.use('TkAgg')
+import math
+import string
 
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+import matplotlib
+from matplotlib.axes import Axes
 from matplotlib.backends.backend_agg import FigureCanvasAgg
+from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
+                                               NavigationToolbar2TkAgg)
 from matplotlib.figure import Figure
 from matplotlib.lines import Line2D
-from matplotlib.axes import Axes
 from matplotlib.ticker import AutoLocator, FixedLocator
+
+import AUTOutil
 import Points
+from graphics import Pmw, grapher
+
+matplotlib.use('TkAgg')
+
 if not Points.numpyimported:
     Points.importnumpy()
 transpose = Points.N.transpose
@@ -39,11 +47,6 @@ try:
 except ImportError:
     import tkinter as Tkinter # Python 3
     from tkinter import filedialog as tkFileDialog
-from graphics import Pmw
-import AUTOutil
-import math
-import string
-from graphics import grapher
 
 GrapherError="GrapherError"
 
@@ -687,9 +690,3 @@ def test():
 
 if __name__=='__main__':
     test()
-
-
-
-
-
-

@@ -3,11 +3,13 @@ try:
     from ConfigParser import ConfigParser
 except ImportError: # Python 3
     from configparser import ConfigParser
-import os
 import array
 import gzip
+import os
 import sys
-import AUTOExceptions
+
+from . import AUTOExceptions
+
 N = array
 
 # This file contains code from the Python distribution.  As

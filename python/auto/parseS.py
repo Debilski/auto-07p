@@ -17,9 +17,16 @@
 #    Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 #    MA 02111-1307, USA
 
+import copy
+import gzip
 import os
-import sys
 import struct
+import sys
+import types
+
+from . import AUTOExceptions, AUTOutil, Points, parseB, parseC, runAUTO
+from .AUTOutil import format19_10E3
+
 try:
     from UserDict import UserDict
     from UserList import UserList
@@ -29,16 +36,6 @@ try:
     file
 except NameError: #Python 3
     from io import IOBase as file
-import AUTOExceptions
-import copy
-import parseB
-import parseC
-import Points
-import runAUTO
-import gzip
-import AUTOutil
-from AUTOutil import format19_10E3
-import types
 
 # End of data exception definition
 class PrematureEndofData(Exception):

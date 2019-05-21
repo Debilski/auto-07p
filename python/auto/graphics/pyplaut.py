@@ -1,13 +1,17 @@
 #!/usr/bin/env autox
-import bifDiag, parseB, AUTOExceptions
-from graphics import windowPlotter
 import code
+import select
 import sys
+
+import AUTOExceptions
+import bifDiag
+import parseB
+from graphics import windowPlotter
+
 try:
     import Tkinter
 except ImportError:
     import tkinter as Tkinter
-import select
 try:
     import termios
 except ImportError:

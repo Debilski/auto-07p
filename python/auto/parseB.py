@@ -19,15 +19,14 @@
 
 import os
 import sys
-import AUTOExceptions
-import AUTOutil
-from AUTOutil import format19_10E3
+
+from . import AUTOExceptions, AUTOutil, Points, parseC
+from .AUTOutil import format19_10E3
+
 try:
     from UserList import UserList
 except ImportError: # Python 3
     from collections import UserList
-import parseC
-import Points
 
 try:
     next
@@ -1351,11 +1350,3 @@ def test():
 
 if __name__ == '__main__' :
     test()
-
-
-
-
-
-
-
-

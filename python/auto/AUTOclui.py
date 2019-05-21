@@ -1,10 +1,9 @@
 #! /usr/bin/env python
-import AUTOutil
-import sys
 import os
-import AUTOCommands
-import runAUTO
-import interactiveBindings
+import sys
+
+from . import AUTOCommands, AUTOutil, interactiveBindings, runAUTO
+
 try:
     import __builtin__
     from new import function
@@ -145,10 +144,3 @@ def test():
 
 if __name__ == "__main__":
     test()
-
-
-
-
-
-
-

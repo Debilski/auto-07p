@@ -5,12 +5,14 @@ except ImportError:
     from graphics import grapher
     print("Using plain TkInter for plotting. You can obtain better quality graphics")
     print("using matplotlib (http://matplotlib.sf.net).")
-import parseB
-import parseS
-import parseC
-import AUTOutil
-import os
 import gc
+import os
+
+import AUTOutil
+import parseB
+import parseC
+import parseS
+
 Axes3D = grapher.Axes3D
 
 class plotter(grapher.GUIGrapher):
@@ -714,8 +716,3 @@ def test():
 
 if __name__ == "__main__":
     test()
-
-
-
-
-

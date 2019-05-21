@@ -6,7 +6,10 @@
 #======================================================================
 #======================================================================
 
-import bifDiag,sys
+import sys
+
+from . import bifDiag
+
 
 def relabel(n1b,n1s,n2b,n2s):
     bd = bifDiag.bifDiag(n1b,n1s)

@@ -4,11 +4,12 @@ try:
     import Tkinter
 except ImportError:
     import tkinter as Tkinter # Python 3
-from graphics import Pmw
-import parseC
-import AUTOutil
-from graphics import plotter
 import sys
+
+import AUTOutil
+import parseC
+from graphics import Pmw, plotter
+
 
 # FIXME:  No regression tester (except as part of interactiveBindings)
 class WindowPlotter(Pmw.MegaToplevel):
@@ -378,6 +379,3 @@ class WindowPlotter2D(WindowPlotter):
         if entry not in labels:
             labels.append(entry)
         self.typeEntry.setlist(labels)
-
-
-

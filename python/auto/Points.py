@@ -12,9 +12,10 @@
 
 from __future__ import division
 
-import AUTOutil
-from copy import copy, deepcopy
 import sys
+from copy import copy, deepcopy
+
+from . import AUTOutil
 
 numpyimported = False
 ndarray = AUTOutil.ArrayType
@@ -2801,4 +2802,3 @@ if __name__ == '__main__':
     print("\n")
     print("x (point) and wp, wnp (param'd and non-param'd pointsets) are available in the global namespace, " \
           "to play with interactively now that this script has run.")
-

@@ -3,6 +3,7 @@
 
 import math
 import sys
+
 try:
     import Tkinter
 except ImportError:

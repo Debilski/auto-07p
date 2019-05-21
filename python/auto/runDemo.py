@@ -1,6 +1,6 @@
 #! /usr/bin/env python
-import runAUTO
-import AUTOExceptions
+from . import AUTOExceptions, runAUTO
+
 
 def runDemo(demo,**kw):
     runner = runAUTO.runAUTO(**kw)
@@ -52,5 +52,3 @@ if __name__ == "__main__":
         runDemo(sys.argv[1])
     if len(sys.argv) == 3:
         runDemo(sys.argv[1],part=sys.argv[2])
-        
-

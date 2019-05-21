@@ -4,15 +4,16 @@
 # NOTE:  This is nowhere near done, and it currently only finds the
 # reduced jacobians and puts them into a list.
 
+import getopt
 import re
 import sys
+
+from . import AUTOutil, parseB
+
 try:
     from UserList import UserList
 except ImportError: # Python 3
     from collections import UserList
-import getopt
-import AUTOutil
-import parseB
 
 class parseD(UserList):
     def __init__(self,filename=None):
@@ -137,7 +138,3 @@ if __name__ == "__main__":
 
     foo = parseD(args[0])
     foo.printMatrix(int(opts["-i"]),sys.stdout)
-
-    
-
-
